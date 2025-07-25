@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Английский с профессионалом | Преподаватель английского языка</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #F59E0B 0%, #3b82f6 70%);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+
+        .heart-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 3px;
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'%3E%3C/path%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'%3E%3C/path%3E%3C/svg%3E");
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+        }
+
+        @keyframes write {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(5deg);
+            }
+        }
+
+        .animate-write {
+            animation: write 3s ease-in-out infinite;
+        }
+
+        /* Дополнительные стили для идеального соответствия */
+        .md\:w-1\/2 {
+            min-height: 400px;
+            /* Фиксированная высота для обеих колонок */
+        }
+
+        /* Для видео-контейнера */
+        .aspect-w-16 {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+        }
+
+        .aspect-h-9 iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-book-open text-blue-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-blue-600">enGlishweb</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">Обо мне</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition">Услуги</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition">Отзывы</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Контакты</a>
+                    <a href="#contact"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Записаться</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20 text-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Английский язык с креативным преподавателем</h1>
+                <p class="text-xl mb-8">Индивидуальные и групповые занятия для всех уровней. Подготовка к экзаменам,
+                    бизнес-английский и разговорная практика.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact"
+                        class="bg-white text-blue-600 px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-100 transition">Записаться
+                        на урок</a>
+                    <a href="#services"
+                        class="border-2 border-white px-6 py-3 rounded-md font-semibold text-center hover:bg-white hover:text-blue-600 transition">Узнать
+                        больше</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://i.pinimg.com/736x/d6/f6/11/d6f611e0f1d755691d556f7990e00c4d.jpg"
+                    alt="Преподаватель английского" class="rounded-lg shadow-xl floating w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <img src="https://i.pinimg.com/736x/d6/f6/11/d6f611e0f1d755691d556f7990e00c4d.jpg"
+                        alt="Преподаватель"
+                        class="rounded-full w-64 h-64 object-cover shadow-lg border-4 border-blue-100">
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6 text-blue-600">Обо мне</h2>
+                    <p class="text-lg mb-4">Меня зовут Крис, и я буду вашим проводником в мире английского языка.</p>
+
+                    <p class="text-lg mb-4">Я выпускница КубГУ по специальности «Зарубежная филология» и отлично
+                        разбираюсь в тонкостях британского и американского английского. Если вам интересна фонетика и
+                        живое звучание языка — нам точно по пути! Мои студенты успешно сдают экзамены, свободно общаются
+                        в путешествиях и уверенно используют английский в работе.</p>
+
+                    <p class="text-lg mb-6">На занятиях я применяю коммуникативную методику, делая упор на практику.
+                        Уроки проходят динамично и увлекательно, а индивидуальный подход помогает каждому ученику
+                        раскрыть свой потенциал.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="text-blue-600 text-3xl mb-2">“</div>
+                            <div class="text-gray-600">Учу слышать<br>музыку языка</div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="text-blue-600 text-3xl mb-2">✍️</div>
+                            <div class="text-gray-600">От Шекспира<br>до современности</div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="text-blue-600 text-3xl mb-2">👂</div>
+                            <div class="text-gray-600">Тонкости<br>произношения</div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="text-blue-600 text-3xl mb-2">🧠</div>
+                            <div class="text-gray-600">Погружение<br>в культуру</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-600 mb-4">Мои услуги</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md service-card transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user-graduate text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Индивидуальные занятия</h3>
+                    <p class="text-gray-600 mb-4">Персональная программа, учитывающая ваши цели, уровень и график.
+                        Максимум разговорной практики и внимания преподавателя.</p>
+                    <div class="text-blue-600 font-semibold">От 2500 руб./час</div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md service-card transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Групповые курсы</h3>
+                    <p class="text-gray-600 mb-4">Занятия в мини-группах (3-5 человек) для тех, кто хочет учиться в
+                        компании единомышленников по доступной цене.</p>
+                    <div class="text-blue-600 font-semibold">От 1300 руб./час</div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md service-card transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-briefcase text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Бизнес-английский</h3>
+                    <p class="text-gray-600 mb-4">Специализированный курс для делового общения: презентации, переговоры,
+                        деловая переписка и профессиональная лексика.</p>
+                    <div class="text-blue-600 font-semibold">От 3000 руб./час</div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md service-card transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-comments text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Разговорный клуб</h3>
+                    <p class="text-gray-600 mb-4">Регулярные встречи для практики разговорного английского на разные
+                        темы с другими студентами. Встречаемся онлайн, обсуждаем историю, литературу, фильмы/сериалы.
+                    </p>
+                    <div class="text-blue-600 font-semibold">800 руб./встреча</div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md service-card transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Онлайн обучение</h3>
+                    <p class="text-gray-600 mb-4">Удобные занятия по VK Tutoria/MAX из любой точки мира. Все материалы
+                        предоставляются в электронном виде.</p>
+                    <div class="text-blue-600 font-semibold">От 2000 руб./час</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2
+                    class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 mb-4">
+                    Отзывы студентов</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Реальные результаты наших учеников</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center mr-4">
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 font-bold text-lg">МК</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Мария К.</h4>
+                            <div class="flex mt-1">
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Занятия с Крис полностью изменили мое восприятие английского. Благодаря
+                        фонетическому интенсиву я наконец-то начала звучать естественно. А литературный клуб помог
+                        углубиться в культурный контекст страны."</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center mr-4">
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 font-bold text-lg">ДС</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Дмитрий С.</h4>
+                            <div class="flex mt-1">
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Готовился к ЕГЭ с Крис и получил 97 баллов, смог поступить в московский
+                        вуз! Далее уже буду более осознанно изучать язык."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center mr-4">
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 font-bold text-lg">ЕП</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Елена П.</h4>
+                            <div class="flex mt-1">
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                                <div class="heart-icon bg-gradient-to-r from-blue-400 to-purple-300 opacity-60"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Как преподаватель литературы, я особенно ценю подход Кристины к анализу
+                        текстов. Мы не просто учим язык, а углубляемся в разные его аспекты. Мой английский стал более
+                        образным и поэтичным. Отдельное спасибо за Шекспира."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="md:flex h-[500px]"> <!-- Фиксированная высота для обоих блоков -->
+                <!-- Левая часть (контакты) -->
+                <div class="md:w-1/2 bg-blue-600 text-white p-10 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6">Свяжитесь со мной</h2>
+                        <div class="mb-6 flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p>89184612591das@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="mb-6 flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Телефон</h4>
+                                <p>+7 (918) 461-25-91</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4">Я в соцсетях</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://vk.com/valterkri"
+                                class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-blue-400 transition">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="https://max.ru/u/f9LHodD0cOIm18sGjPrBEf8Vhp1gWo9gFIAEQePRcM4dJcSF5oJeMO4TVG4" target="_blank"
+                                class="w-10 h-10 rounded-full flex items-center justify-center transition bg-gradient-to-br from-blue-400 to-purple-500 hover:bg-purple-400">
+                                <span class="text-white font-bold text-xs tracking-tight">MAX</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая часть (фото) -->
+                <div class="md:w-1/2 flex items-center justify-center p-0 bg-gray-100 h-[500px]">
+                    <div class="w-full h-full overflow-hidden shadow-lg">
+                        <img src="https://i.pinimg.com/736x/44/c3/df/44c3df49255de58124aeb1289020bdb4.jpg"
+                            alt="Пример занятия" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-book-open text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">enGlishweb</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">Профессиональное обучение английскому языку</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#about" class="text-gray-400 hover:text-white transition">Обо мне</a>
+                    <a href="#services" class="text-gray-400 hover:text-white transition">Услуги</a>
+                    <a href="#testimonials" class="text-gray-400 hover:text-white transition">Отзывы</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition">Контакты</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 enGlishweb. Все права защищены.</p>
+            </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-6 right-6 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile Menu Toggle (would need additional implementation)
+        // Form Submission (would need backend implementation)
+    </script>
+</body>
+
+</html>
